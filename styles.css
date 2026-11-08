@@ -83,3 +83,34 @@
 .vps-section{padding:70px 0}.vps-choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.vps-choice-card{position:relative;background:var(--panel);border:1px solid var(--line);padding:32px;display:flex;flex-direction:column}.vps-choice-featured{border-color:#8c744b;background:linear-gradient(145deg,#1a1b22,#11141b)}.vps-choice-icon{position:absolute;right:30px;top:22px;color:var(--gold);font-size:25px}.vps-choice-card h3{font-family:"Playfair Display",serif;font-size:34px;font-weight:500;margin:24px 0 0}.vps-choice-subtitle{font-size:9px;letter-spacing:1.8px;color:var(--gold);margin:4px 0 12px}.vps-choice-card p{font-size:12px;color:var(--muted);min-height:70px}.vps-choice-card ul{padding-left:17px;font-size:11px;color:#c9c7c0;line-height:2.1;flex:1}.vps-choice-card li::marker{color:var(--gold)}.vps-choice-card .button{margin-top:18px}.vps-recommended{position:absolute;right:18px;top:17px;border:1px solid #66553b;padding:5px 7px;font-size:8px;letter-spacing:1.2px;color:var(--gold2)}.vps-price-note,.vps-important{margin-top:18px;padding:16px 19px;border-left:2px solid var(--gold);background:#17171a}.vps-price-note b,.vps-important b{font-size:11px;color:#ddc99e}.vps-price-note p,.vps-important p{font-size:11px;color:var(--muted);margin:5px 0 0;line-height:1.8}.vps-phone-workflow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.vps-phone-workflow article{padding:25px;background:var(--panel);border:1px solid var(--line);position:relative}.vps-phone-workflow article>span{font-size:9px;letter-spacing:2px;color:var(--gold)}.vps-app-icon{width:54px;height:54px;border:1px solid #806c48;color:var(--gold2);display:grid;place-items:center;margin:20px 0;font-family:"Playfair Display",serif;font-size:18px}.vps-phone-workflow h3,.vps-steps h3{font-family:"Playfair Display",serif;font-weight:500;font-size:20px}.vps-phone-workflow p,.vps-steps p{font-size:11px;color:var(--muted)}.vps-spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.vps-spec-grid>div{padding:26px;background:var(--panel);border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:5px 15px}.vps-spec-grid span{grid-column:1/-1;font-size:9px;letter-spacing:1.5px;color:var(--gold);margin-bottom:10px}.vps-spec-grid b{font-family:"Playfair Display",serif;font-size:22px;font-weight:500;color:var(--gold2)}.vps-spec-grid small{font-size:9px;color:var(--muted);align-self:center}.vps-footnote{font-size:10px;color:#888b93;line-height:1.8;margin-top:14px}.vps-steps{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line)}.vps-steps>div{padding:23px;border-right:1px solid var(--line)}.vps-steps>div:last-child{border:0}.vps-steps span{font-size:10px;letter-spacing:2px;color:var(--gold)}.vps-faq{padding-top:30px}.vps-contact-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 @media(max-width:900px){.vps-hero-grid{grid-template-columns:1fr}.vps-hero-visual{max-width:600px;width:100%;margin:0 auto}.vps-home-panel{grid-template-columns:1fr}.vps-home-side{border-left:0;border-top:1px solid #37313a}.vps-steps{grid-template-columns:1fr 1fr}.vps-steps>div:nth-child(2){border-right:0}.vps-steps>div:nth-child(3),.vps-steps>div:nth-child(4){border-top:1px solid var(--line)}.vps-steps>div:nth-child(4){border-right:0}}
 @media(max-width:680px){.vps-hero{padding:50px 0 35px}.vps-hero h1{font-size:44px}.vps-hero-grid{gap:25px}.vps-hero-visual{padding:8px}.vps-device-card{padding:14px}.vps-screen{min-height:160px}.vps-screen-chart{min-height:115px}.vps-choice-grid,.vps-phone-workflow,.vps-spec-grid{grid-template-columns:1fr}.vps-choice-card{padding:25px}.vps-choice-card p{min-height:0}.vps-home-copy,.vps-home-side{padding:26px}.vps-steps{grid-template-columns:1fr}.vps-steps>div{border-right:0;border-top:1px solid var(--line)}.vps-steps>div:first-child{border-top:0}.vps-steps>div:nth-child(2){border-right:0}.vps-steps>div:nth-child(3),.vps-steps>div:nth-child(4){border-top:1px solid var(--line)}.vps-spec-grid>div{padding:20px}}
+
+/* Navigation refinement: keep every menu label on a single line */
+.site-header nav {
+  flex-wrap: nowrap;
+  min-width: 0;
+  white-space: nowrap;
+  gap: clamp(9px, 1.35vw, 20px);
+}
+.site-header nav a {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+@media (max-width: 1100px) and (min-width: 681px) {
+  .site-header {
+    padding-left: max(3vw, 18px);
+    padding-right: max(3vw, 18px);
+  }
+  .site-header .brand-logo {
+    width: 205px;
+  }
+  .site-header nav {
+    gap: 9px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 900px) and (min-width: 681px) {
+  .site-header nav {
+    gap: 7px;
+    font-size: 9px;
+  }
+}
