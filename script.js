@@ -14,7 +14,7 @@ if (mainWa) {
 }
 
 document.querySelectorAll('[data-wa="product"]').forEach((el) => {
-  el.href = waLink("Halo Entry Level FX EA, saya ingin menanyakan status dan informasi XAUUSDc AUTO DUAL PENDING GRID V2.1.");
+  el.href = waLink("Halo Entry Level FX EA, saya ingin konsultasi dan melakukan pemesanan rental XAUUSDc AUTO DUAL PENDING GRID V2.1. Mohon informasi prosedur aktivasi, kompatibilitas akun/broker, instalasi, dan dukungan teknis. Pilihan durasi: 1 bulan Rp249.000 / 3 bulan Rp649.000 / 6 bulan Rp1.099.000 / 1 tahun Rp1.899.000.");
 });
 
 const form = document.getElementById("briefForm");
