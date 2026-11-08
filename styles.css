@@ -321,29 +321,25 @@
 }
 
 
-/* Final navigation readability adjustment */
+/* Final navigation typography: consistent 12px on all screens */
+.site-header nav,
+.site-header nav.open,
+.site-header nav a {
+  font-size: 12px !important;
+}
 @media (min-width: 681px) {
   .site-header nav,
   .site-header nav.open {
-    font-size: 13px !important;
-    gap: clamp(12px, 1vw, 16px) !important;
+    gap: clamp(10px, .9vw, 14px) !important;
   }
   .site-header nav a {
-    font-size: 13px !important;
     font-weight: 600 !important;
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 }
 @media (max-width: 680px) {
-  .site-header nav,
-  .site-header nav.open {
-    font-size: 14px !important;
-  }
   .site-header nav a {
-    font-size: 14px !important;
     font-weight: 600 !important;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 13px;
+    padding-bottom: 13px;
   }
 }
