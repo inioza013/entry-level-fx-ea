@@ -1,7 +1,7 @@
 // Entry Level FX EA — Phase 1 static catalog website
 // Update this number to the official WhatsApp Business number (country code, digits only).
 // Example Indonesia: 6281234567890
-const WHATSAPP_NUMBER = "62895328696545";
+const WHATSAPP_NUMBER = "6289532869545";
 
 function waLink(message) {
   const number = WHATSAPP_NUMBER.replace(/\D/g, "");
