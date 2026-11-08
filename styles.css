@@ -319,3 +319,31 @@
     font-size: 13px;
   }
 }
+
+
+/* Final navigation readability adjustment */
+@media (min-width: 681px) {
+  .site-header nav,
+  .site-header nav.open {
+    font-size: 13px !important;
+    gap: clamp(12px, 1vw, 16px) !important;
+  }
+  .site-header nav a {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 680px) {
+  .site-header nav,
+  .site-header nav.open {
+    font-size: 14px !important;
+  }
+  .site-header nav a {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+}
