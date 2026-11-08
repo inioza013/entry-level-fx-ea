@@ -22,16 +22,27 @@ if (form) {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const data = new FormData(form);
+    const value = (key) => (data.get(key) || "").toString().trim() || "-";
     const message = [
       "Halo Entry Level FX EA, saya ingin konsultasi Custom EA.",
       "",
-      `Nama: ${data.get("name")}`,
-      `Platform: ${data.get("platform")}`,
-      `Instrumen: ${data.get("symbol") || "-"}`,
-      `Strategi: ${data.get("strategy")}`,
+      "DATA KONSULTASI",
+      `Nama: ${value("name")}`,
+      `Paket diminati: ${value("package")}`,
+      `Platform: ${value("platform")}`,
+      `Instrumen: ${value("symbol")}`,
+      `Timeframe: ${value("timeframe")}`,
+      `Jenis strategi: ${value("strategy")}`,
       "",
-      "Detail strategi:",
-      data.get("details"),
+      "SPESIFIKASI STRATEGI",
+      `Aturan entry: ${value("entry")}`,
+      `Aturan exit: ${value("exit")}`,
+      `Lot / manajemen risiko: ${value("risk")}`,
+      `Maksimal posisi / layer: ${value("positions")}`,
+      `Fitur tambahan: ${value("features")}`,
+      `Catatan / referensi: ${value("details")}`,
+      "",
+      "Mohon bantu analisis ruang lingkup, paket, estimasi biaya, dan waktu pengerjaan. Terima kasih."
     ].join("\n");
     window.open(waLink(message), "_blank", "noopener");
   });
