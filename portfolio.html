@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b10">
+  <title>Portofolio Custom EA MT5 | Entry Level FX EA</title>
+  <meta name="description" content="Jelajahi contoh konsep pengembangan Expert Advisor MT5 oleh Entry Level FX EA: trend following, breakout, grid layering, dan multi-timeframe.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://inioza013.github.io/entry-level-fx-ea/portfolio.html">
+  <meta property="og:title" content="Portofolio Custom EA MT5 | Entry Level FX EA">
+  <meta property="og:description" content="Contoh konsep dan ruang lingkup pengembangan EA MT5 sesuai strategi trading Anda.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://inioza013.github.io/entry-level-fx-ea/portfolio.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .portfolio-hero{padding:76px 0 55px;max-width:820px}
+    .portfolio-hero h1{font:500 clamp(42px,6vw,68px)/1.12 "Playfair Display",serif;letter-spacing:-1.5px;margin:18px 0}
+    .portfolio-hero h1 em{color:var(--gold2);font-weight:500}
+    .portfolio-hero p{max-width:690px;color:var(--muted);font-size:14px}
+    .portfolio-disclosure{margin-top:24px;padding:13px 16px;border-left:2px solid var(--gold);background:#17171a;color:#c8c1b2;font-size:11px}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding-bottom:80px}
+    .portfolio-card{border:1px solid var(--line);background:var(--panel);min-width:0}
+    .portfolio-art{height:220px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#30291d 0,#171923 48%,#0d1017 100%);border-bottom:1px solid var(--line)}
+    .portfolio-art:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 39px,#ffffff0b 40px),repeating-linear-gradient(90deg,transparent 0 49px,#ffffff08 50px)}
+    .portfolio-art .art-label{position:absolute;top:17px;left:20px;font-size:8px;letter-spacing:2px;color:#c6a66a}
+    .portfolio-art svg{position:absolute;inset:35px 18px 15px;width:calc(100% - 36px);height:calc(100% - 50px)}
+    .portfolio-content{padding:25px}
+    .portfolio-meta{display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:8px;letter-spacing:1.4px;color:var(--gold)}
+    .portfolio-meta span:last-child{border:1px solid #5c4b32;padding:4px 7px;color:#cfc0a0}
+    .portfolio-content h2{font:500 27px "Playfair Display",serif;margin:13px 0 7px}
+    .portfolio-content p{font-size:12px;color:var(--muted);min-height:58px}
+    .portfolio-content ul{padding-left:17px;color:#cbc8c0;font-size:11px;line-height:1.9}
+    .portfolio-content li::marker{color:var(--gold)}
+    .portfolio-foot{padding:20px 0 75px;border-top:1px solid var(--line)}
+    .portfolio-foot h2{font:500 34px "Playfair Display",serif;margin:12px 0}
+    .portfolio-foot p{font-size:12px;color:var(--muted);max-width:650px}
+    @media(max-width:680px){.portfolio-hero{padding:52px 0 35px}.portfolio-grid{grid-template-columns:1fr;padding-bottom:55px}.portfolio-art{height:190px}.portfolio-content{padding:22px}.portfolio-content p{min-height:0}}
+  </style>
+</head>
+<body>
+  <div class="topline"><span>TRADING AUTOMATION SOLUTIONS</span><span>INDONESIA · METATRADER 5</span></div>
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="Entry Level FX EA home"><img class="brand-logo" src="logo.svg" alt="Entry Level FX EA — Trading Automation Solutions"></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="index.html#services">Layanan</a>
+      <a href="index.html#rental">Rental EA</a>
+      <a href="index.html#custom">Custom EA</a>
+      <a href="portfolio.html" aria-current="page">Portofolio</a>
+      <a href="index.html#process">Cara Kerja</a>
+      <a class="nav-cta" href="index.html#contact">Konsultasi <span>↗</span></a>
+    </nav>
+  </header>
+  <main>
+    <section class="section-wrap portfolio-hero">
+      <div class="eyebrow">CUSTOM EA / DEVELOPMENT SHOWCASE</div>
+      <h1>Trading ideas.<br><em>Engineered into rules.</em></h1>
+      <p>Berikut contoh jenis sistem dan fitur yang dapat dibahas dalam proyek pengembangan Expert Advisor MT5. Setiap sistem disesuaikan dengan aturan strategi, kebutuhan, dan ruang lingkup yang disepakati bersama.</p>
+      <div class="portfolio-disclosure"><b>Transparansi portofolio:</b> Kartu di bawah merupakan ilustrasi konsep pengembangan, bukan bukti EA telah selesai dibuat, bukan hasil backtest, dan bukan klaim performa trading.</div>
+    </section>
+
+    <section class="section-wrap portfolio-grid" aria-label="Contoh konsep pengembangan EA">
+      <article class="portfolio-card">
+        <div class="portfolio-art">
+          <span class="art-label">CONCEPT / 001 · TREND</span>
+          <svg viewBox="0 0 520 180" role="img" aria-label="Ilustrasi garis tren dan moving average">
+            <path d="M0 145 L40 130 L80 139 L120 105 L160 118 L200 85 L240 98 L280 63 L320 79 L360 45 L400 60 L440 27 L520 15" fill="none" stroke="#d6b77b" stroke-width="3"/>
+            <path d="M0 160 C100 150 120 130 200 120 S350 75 520 52" fill="none" stroke="#7d9d8a" stroke-width="2" stroke-dasharray="7 5"/>
+            <path d="M0 145 L40 130 L80 139 L120 105 L160 118 L200 85 L240 98 L280 63 L320 79 L360 45 L400 60 L440 27 L520 15 L520 180 L0 180Z" fill="#c6a66a" opacity=".08"/>
+          </svg>
+        </div>
+        <div class="portfolio-content">
+          <div class="portfolio-meta"><span>STRATEGY TYPE 01</span><span>CONCEPT</span></div>
+          <h2>Trend Following EA</h2>
+          <p>Otomasi entry berdasarkan arah tren dan konfirmasi indikator yang ditentukan dalam spesifikasi.</p>
+          <ul><li>Moving average atau indikator tren</li><li>Filter arah dan timeframe</li><li>Stop Loss, Take Profit, dan pengelolaan posisi</li></ul>
+        </div>
+      </article>
+
+      <article class="portfolio-card">
+        <div class="portfolio-art">
+          <span class="art-label">CONCEPT / 002 · BREAKOUT</span>
+          <svg viewBox="0 0 520 180" role="img" aria-label="Ilustrasi level support resistance dan breakout">
+            <path d="M0 58 H520 M0 128 H520" stroke="#c6a66a" stroke-width="1.5" stroke-dasharray="8 6" opacity=".8"/>
+            <path d="M0 145 L35 120 L70 137 L105 105 L140 120 L175 92 L210 112 L245 82 L280 103 L315 69 L350 88 L385 50 L420 66 L455 23 L520 12" fill="none" stroke="#d6b77b" stroke-width="3"/>
+            <path d="M455 23 L455 58 M445 35 L455 23 L465 35" stroke="#d6b77b" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <div class="portfolio-content">
+          <div class="portfolio-meta"><span>STRATEGY TYPE 02</span><span>CONCEPT</span></div>
+          <h2>Breakout EA</h2>
+          <p>Sistem yang memantau level harga dan menjalankan aturan entry ketika kondisi breakout terpenuhi.</p>
+          <ul><li>Level support dan resistance</li><li>Konfirmasi candle atau buffer breakout</li><li>Filter waktu dan batas spread opsional</li></ul>
+        </div>
+      </article>
+
+      <article class="portfolio-card">
+        <div class="portfolio-art">
+          <span class="art-label">CONCEPT / 003 · GRID</span>
+          <svg viewBox="0 0 520 180" role="img" aria-label="Ilustrasi level entry bertingkat">
+            <g stroke="#c6a66a" stroke-width="1.5" stroke-dasharray="6 5" opacity=".9"><path d="M20 35 H500 M20 70 H500 M20 105 H500 M20 140 H500"/></g>
+            <g fill="#d6b77b"><circle cx="95" cy="35" r="5"/><circle cx="170" cy="70" r="5"/><circle cx="245" cy="105" r="5"/><circle cx="320" cy="140" r="5"/></g>
+            <path d="M20 18 L70 48 L120 28 L170 80 L220 65 L270 112 L320 92 L370 145 L420 120 L500 158" fill="none" stroke="#a9b9a9" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <div class="portfolio-content">
+          <div class="portfolio-meta"><span>STRATEGY TYPE 03</span><span>CONCEPT</span></div>
+          <h2>Grid / Layering EA</h2>
+          <p>Pengelolaan beberapa entry bertingkat berdasarkan jarak, arah, ukuran lot, dan batas risiko basket.</p>
+          <ul><li>Jarak grid dan aturan penambahan posisi</li><li>Lot tetap atau skema lot yang ditentukan</li><li>Basket target, batas rugi, dan proteksi posisi</li></ul>
+        </div>
+      </article>
+
+      <article class="portfolio-card">
+        <div class="portfolio-art">
+          <span class="art-label">CONCEPT / 004 · MULTI-TF</span>
+          <svg viewBox="0 0 520 180" role="img" aria-label="Ilustrasi konfirmasi multi timeframe">
+            <rect x="12" y="18" width="145" height="140" fill="#c6a66a" opacity=".06" stroke="#776344"/>
+            <rect x="187" y="18" width="145" height="140" fill="#c6a66a" opacity=".06" stroke="#776344"/>
+            <rect x="362" y="18" width="145" height="140" fill="#c6a66a" opacity=".06" stroke="#776344"/>
+            <g fill="#d6b77b" font-size="12" font-family="Arial"><text x="25" y="37">H1</text><text x="200" y="37">M15</text><text x="375" y="37">M5</text></g>
+            <g stroke="#d6b77b" stroke-width="2"><path d="M38 118 L65 95 L88 108 L120 65"/><path d="M212 130 L235 105 L260 112 L292 72"/><path d="M387 135 L410 118 L435 85 L470 48"/></g>
+          </svg>
+        </div>
+        <div class="portfolio-content">
+          <div class="portfolio-meta"><span>STRATEGY TYPE 04</span><span>CONCEPT</span></div>
+          <h2>Multi-Timeframe EA</h2>
+          <p>Memadukan filter arah dari timeframe lebih tinggi dengan pemicu entry pada timeframe lebih rendah.</p>
+          <ul><li>Konfirmasi tren multi-timeframe</li><li>Aturan entry dan exit terpisah</li><li>Parameter dan filter yang dapat disesuaikan</li></ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="section-wrap portfolio-foot">
+      <div class="eyebrow">FROM CONCEPT TO CUSTOM EA</div>
+      <h2>Have a different strategy?</h2>
+      <p>Contoh di atas bukan batas layanan. Strategi indikator, price action, SMC, pending order, maupun kombinasi aturan lain dapat dibahas terlebih dahulu untuk menilai kelayakan dan ruang lingkup pengembangan.</p>
+      <a class="button button-gold" href="index.html#custom">Lihat Paket Custom EA <span>↗</span></a>
+      <a class="button button-outline" id="mainWhatsApp" href="#" target="_blank" rel="noopener">Konsultasi via WhatsApp</a>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-brand"><img class="footer-logo" src="logo.svg" alt="Entry Level FX EA"></div>
+    <div class="footer-links"><a href="index.html#services">Layanan</a><a href="index.html#rental">Rental EA</a><a href="index.html#custom">Custom EA</a><a href="portfolio.html">Portofolio</a><a href="index.html#contact">Kontak</a><a href="terms.html">Syarat &amp; Ketentuan</a></div>
+    <p class="risk-disclaimer"><b>Risk Disclaimer:</b> Trading Forex/CFD memiliki risiko tinggi dan tidak cocok untuk semua investor. EA tidak menjamin profit dan performa masa lalu tidak menjamin hasil di masa depan. Gunakan akun demo untuk pengujian dan pertimbangkan risiko sebelum trading.</p>
+    <div class="footer-bottom"><span>© <span id="year"></span> Entry Level FX EA. All rights reserved.</span><span>Designed for precision. Not promises.</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
