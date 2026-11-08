@@ -238,10 +238,17 @@
         <div><div class="eyebrow">CUSTOM EA BRIEF</div><h3>Ceritakan kebutuhan EA Anda.</h3><p>Form ini akan menyusun pesan konsultasi dan membuka WhatsApp.</p></div>
         <form id="briefForm">
           <label>Nama<input name="name" required placeholder="Nama Anda"></label>
+          <label>Paket yang diminati<select name="package"><option>Belum ditentukan / Konsultasi</option><option>Starter EA — Rp650.000</option><option>Advanced EA — Rp1.250.000</option><option>Custom Pro EA — Rp2.250.000</option></select></label>
           <label>Platform<select name="platform"><option>MetaTrader 5 (MT5)</option><option>MetaTrader 4 (MT4)</option><option>Belum ditentukan</option></select></label>
           <label>Instrumen<input name="symbol" placeholder="Contoh: XAUUSD, EURUSD"></label>
-          <label>Jenis strategi<select name="strategy"><option>Grid / Layering</option><option>Trend following</option><option>SMC / Price Action</option><option>Breakout</option><option>Indikator</option><option>Strategi lainnya</option></select></label>
-          <label class="full">Deskripsi strategi<textarea name="details" required rows="4" placeholder="Jelaskan entry, exit, SL/TP, manajemen lot, filter, dan fitur yang dibutuhkan."></textarea></label>
+          <label>Timeframe utama<select name="timeframe"><option>Belum ditentukan</option><option>M1</option><option>M5</option><option>M15</option><option>M30</option><option>H1</option><option>H4</option><option>D1</option><option>Multi-timeframe</option></select></label>
+          <label>Jenis strategi<select name="strategy"><option>Grid / Layering</option><option>Trend following</option><option>SMC / Price Action</option><option>Breakout</option><option>Indikator</option><option>Scalping</option><option>Strategi lainnya</option></select></label>
+          <label class="full">Aturan entry<textarea name="entry" rows="3" placeholder="Kapan EA boleh BUY atau SELL? Sertakan indikator, kondisi candle, filter, atau contoh aturan."></textarea></label>
+          <label class="full">Aturan exit<textarea name="exit" rows="3" placeholder="Jelaskan SL, TP, close signal, basket target, trailing, atau kondisi keluar lainnya."></textarea></label>
+          <label>Lot / manajemen risiko<input name="risk" placeholder="Contoh: fixed lot 0.01 atau risiko 1%"></label>
+          <label>Maksimal posisi / layer<input name="positions" placeholder="Contoh: 1 posisi atau 5 layer"></label>
+          <label class="full">Fitur tambahan<textarea name="features" rows="2" placeholder="Contoh: Break Even, Trailing Stop, session filter, panel, notifikasi."></textarea></label>
+          <label class="full">Catatan / referensi<textarea name="details" rows="3" placeholder="Tambahkan detail lain atau tautan gambar/video referensi (opsional)."></textarea></label>
           <button class="button button-gold full" type="submit">Kirim brief melalui WhatsApp ↗</button>
         </form>
       </div>
