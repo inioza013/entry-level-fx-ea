@@ -62,3 +62,10 @@ if (menuToggle && nav) {
 }
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
+
+document.querySelectorAll('[data-wa="vps-byo"]').forEach((el) => {
+  el.href = waLink("Halo Entry Level FX EA, saya sudah memiliki VPS sendiri dan ingin konsultasi bantuan instalasi MT5 serta EA. Mohon informasi persyaratan, biaya instalasi, dan jadwal pengerjaan.");
+});
+document.querySelectorAll('[data-wa="vps-managed"]').forEach((el) => {
+  el.href = waLink("Halo Entry Level FX EA, saya ingin mengajukan layanan Managed VPS untuk menjalankan EA MT5. Mohon informasi ketersediaan, spesifikasi server, biaya VPS dan pengelolaan, serta prosedur pemesanan.");
+});
