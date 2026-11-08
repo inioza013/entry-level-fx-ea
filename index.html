@@ -47,7 +47,19 @@
   }
   </script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    .rental-price-panel{margin:20px 0 14px;padding:16px;background:#11141c;border:1px solid var(--line)}
+    .rental-price-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+    .rental-price-heading span{font-size:10px;letter-spacing:1.5px;color:var(--gold2);font-weight:700}
+    .rental-price-heading small{font-size:10px;color:var(--muted)}
+    .rental-price-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .rental-price-item{padding:12px;background:#191b23;border:1px solid var(--line);min-width:0}
+    .rental-price-item span{display:block;font-size:9px;letter-spacing:1px;color:var(--muted);margin-bottom:6px}
+    .rental-price-item strong{display:block;font:500 clamp(17px,2vw,23px) "Playfair Display",serif;color:var(--gold2);white-space:nowrap}
+    .product-note{line-height:1.7}
+    @media(max-width:480px){.rental-price-panel{padding:12px}.rental-price-item{padding:10px}.rental-price-item strong{font-size:17px}}
+  </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="topline"><span>TRADING AUTOMATION SOLUTIONS</span><span>INDONESIA · METATRADER 5</span></div>
@@ -131,7 +143,7 @@
     <section class="section-wrap section rental-section" id="rental">
       <div class="section-heading">
         <div><div class="eyebrow">EA CATALOG</div><h2>Automation<br><em>in your hands.</em></h2></div>
-        <p>Produk ditampilkan berdasarkan status pengembangan dan pengujian. Detail, kompatibilitas, dan biaya rental akan tersedia pada halaman produk.</p>
+        <p>Gunakan EA XAUUSDc AUTO DUAL PENDING GRID V2.1 melalui pilihan masa rental 1, 3, 6, atau 12 bulan. Hubungi kami untuk konsultasi kompatibilitas dan prosedur aktivasi sebelum melakukan pemesanan.</p>
       </div>
       <article class="product-card">
         <div class="product-visual">
@@ -141,13 +153,22 @@
           <div class="product-caption">DUAL PENDING · GRID SYSTEM</div>
         </div>
         <div class="product-info">
-          <div class="product-status"><span class="status-dot gold-dot"></span> DEVELOPMENT & TESTING</div>
+          <div class="product-status"><span class="status-dot gold-dot"></span> AVAILABLE FOR RENTAL</div>
           <h3>XAUUSDc AUTO<br>DUAL PENDING GRID</h3>
           <p class="product-version">VERSION 2.1 · MT5 / MQL5</p>
           <p>EA grid dengan mode pending LIMIT, STOP, dan ZIGZAG; dilengkapi layering, basket management, BEP Lock, dan trailing.</p>
           <div class="feature-tags"><span>LIMIT / STOP / ZIGZAG</span><span>OCO</span><span>BEP LOCK</span><span>TRAILING</span></div>
-          <div class="product-note">Produk ini masih dalam tahap compile, verifikasi, dan pengujian. Belum tersedia untuk rental publik.</div>
-          <a class="button button-outline" href="#contact" data-wa="product">Tanyakan status produk</a>
+          <div class="rental-price-panel">
+            <div class="rental-price-heading"><span>RENTAL PRICING</span><small>Harga rental resmi</small></div>
+            <div class="rental-price-grid">
+              <div class="rental-price-item"><span>1 BULAN</span><strong>Rp249.000</strong></div>
+              <div class="rental-price-item"><span>3 BULAN</span><strong>Rp649.000</strong></div>
+              <div class="rental-price-item"><span>6 BULAN</span><strong>Rp1.099.000</strong></div>
+              <div class="rental-price-item"><span>1 TAHUN</span><strong>Rp1.899.000</strong></div>
+            </div>
+          </div>
+          <div class="product-note">Sebelum pembayaran, konsultasikan kompatibilitas akun/broker, prosedur aktivasi lisensi, instalasi, dan cakupan dukungan teknis melalui WhatsApp. EA tidak menjamin profit; pahami risiko grid dan lakukan pengujian demo terlebih dahulu.</div>
+          <a class="button button-gold" href="#contact" data-wa="product">Konsultasi & Rental via WhatsApp ↗</a>
         </div>
       </article>
       <div class="catalog-note"><span>+</span><div><b>EA berikutnya segera menyusul</b><p>Katalog akan diperluas setelah setiap produk melewati proses pengujian dan dokumentasi.</p></div></div>
