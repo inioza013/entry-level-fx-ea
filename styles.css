@@ -511,3 +511,41 @@
     text-align: center;
   }
 }
+
+
+/* HEADER POLISH — larger brand, tighter logo-to-menu spacing, clearer navigation */
+@media (min-width: 1200px) {
+  .site-header {
+    padding-left: clamp(28px, 4vw, 56px);
+    padding-right: clamp(28px, 4vw, 56px);
+    gap: 16px;
+  }
+  .site-header .brand {
+    flex: 0 0 auto;
+    margin-right: 0;
+  }
+  .site-header .brand-logo {
+    width: 220px;
+    max-width: none;
+  }
+  .site-header nav,
+  .site-header nav.open {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    gap: clamp(8px, .72vw, 12px);
+  }
+  .site-header nav a {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: .05px;
+  }
+}
+@media (min-width: 1401px) {
+  .site-header .brand-logo {
+    width: 230px;
+  }
+  .site-header nav,
+  .site-header nav.open {
+    gap: clamp(10px, .8vw, 14px);
+  }
+}
