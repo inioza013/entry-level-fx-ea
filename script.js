@@ -1,16 +1,14 @@
-// Entry Level FX EA — Phase 1 static catalog website
-// Update this number to the official WhatsApp Business number (country code, digits only).
-// Example Indonesia: 6281234567890
+// Entry Level FX EA — shared website interactions
 const WHATSAPP_NUMBER = "62895328696545";
 
 function waLink(message) {
   const number = WHATSAPP_NUMBER.replace(/\D/g, "");
-  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+  return "https://wa.me/" + number + "?text=" + encodeURIComponent(message);
 }
 
 const mainWa = document.getElementById("mainWhatsApp");
 if (mainWa) {
-  mainWa.href = waLink("Halo Entry Level FX EA, saya ingin konsultasi mengenai rental EA / custom EA.");
+  mainWa.href = waLink("Halo Entry Level FX EA, saya ingin konsultasi mengenai EA Rental, Custom EA Development, atau VPS Assistance.");
 }
 
 document.querySelectorAll('[data-wa="product"]').forEach((el) => {
@@ -27,20 +25,20 @@ if (form) {
       "Halo Entry Level FX EA, saya ingin konsultasi Custom EA.",
       "",
       "DATA KONSULTASI",
-      `Nama: ${value("name")}`,
-      `Paket diminati: ${value("package")}`,
-      `Platform: ${value("platform")}`,
-      `Instrumen: ${value("symbol")}`,
-      `Timeframe: ${value("timeframe")}`,
-      `Jenis strategi: ${value("strategy")}`,
+      "Nama: " + value("name"),
+      "Paket diminati: " + value("package"),
+      "Platform: " + value("platform"),
+      "Instrumen: " + value("symbol"),
+      "Timeframe: " + value("timeframe"),
+      "Jenis strategi: " + value("strategy"),
       "",
       "SPESIFIKASI STRATEGI",
-      `Aturan entry: ${value("entry")}`,
-      `Aturan exit: ${value("exit")}`,
-      `Lot / manajemen risiko: ${value("risk")}`,
-      `Maksimal posisi / layer: ${value("positions")}`,
-      `Fitur tambahan: ${value("features")}`,
-      `Catatan / referensi: ${value("details")}`,
+      "Aturan entry: " + value("entry"),
+      "Aturan exit: " + value("exit"),
+      "Lot / manajemen risiko: " + value("risk"),
+      "Maksimal posisi / layer: " + value("positions"),
+      "Fitur tambahan: " + value("features"),
+      "Catatan / referensi: " + value("details"),
       "",
       "Mohon bantu analisis ruang lingkup, paket, estimasi biaya, dan waktu pengerjaan. Terima kasih."
     ].join("\n");
@@ -51,15 +49,27 @@ if (form) {
 const menuToggle = document.getElementById("menuToggle");
 const nav = document.getElementById("mainNav");
 if (menuToggle && nav) {
+  const closeMenu = () => {
+    nav.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Buka navigasi");
+    menuToggle.textContent = "☰";
+  };
   menuToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("open");
     menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Tutup navigasi" : "Buka navigasi");
+    menuToggle.textContent = isOpen ? "×" : "☰";
   });
-  nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-  }));
+  nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
+  document.addEventListener("click", (event) => {
+    if (!nav.contains(event.target) && !menuToggle.contains(event.target)) closeMenu();
+  });
 }
+
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
