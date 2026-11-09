@@ -376,3 +376,85 @@
   .site-header .brand-logo { width: min(58vw, 190px); }
   .service-grid { grid-template-columns: 1fr; }
 }
+
+
+/* FINAL NAVIGATION FIX — restore visible menu control on tablet/laptop widths */
+@media (min-width: 681px) and (max-width: 1400px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .site-header .menu-toggle {
+    display: inline-grid !important;
+    place-items: center;
+    flex: 0 0 44px;
+    min-width: 44px;
+    min-height: 42px;
+    cursor: pointer;
+  }
+  .site-header nav,
+  .site-header nav.open {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px max(5vw, 22px) 18px;
+    margin: 0;
+    background: rgba(10,11,16,.985);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 18px 30px rgba(0,0,0,.35);
+    white-space: normal;
+    z-index: 60;
+  }
+  .site-header nav.open {
+    display: flex !important;
+  }
+  .site-header nav a {
+    display: block;
+    width: 100%;
+    padding: 12px 2px;
+    border-bottom: 1px solid #252731;
+    white-space: normal;
+    font-size: 12px;
+  }
+  .site-header nav .nav-cta {
+    margin: 12px 0 0;
+    text-align: center;
+  }
+}
+@media (max-width: 680px) {
+  .site-header .menu-toggle {
+    display: inline-grid !important;
+    place-items: center;
+  }
+  .site-header nav,
+  .site-header nav.open {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+@media (min-width: 1401px) {
+  .site-header .menu-toggle {
+    display: none !important;
+  }
+  .site-header nav,
+  .site-header nav.open {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+  }
+}
