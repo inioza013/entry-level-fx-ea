@@ -16,7 +16,7 @@ document.querySelectorAll('[data-wa="product"]').forEach((el) => {
 });
 
 document.querySelectorAll('[data-wa="smc-rental"]').forEach((el) => {
-  el.href = waLink("Halo Entry Level FX EA, saya ingin konsultasi dan melakukan pemesanan rental SMC HYBRID GRID EA V1.6. Mohon informasi harga rental, kompatibilitas akun/broker, aktivasi lisensi, instalasi, dan dukungan teknis.");
+  el.href = waLink("Halo Entry Level FX EA, saya ingin konsultasi dan melakukan pemesanan rental SMC HYBRID GRID EA V1.6. Pilihan durasi: 1 bulan Rp199.000 / 3 bulan Rp599.000 / 6 bulan Rp1.049.000 / 1 tahun Rp1.849.000. Mohon informasi kompatibilitas akun/broker, aktivasi lisensi, instalasi, dan dukungan teknis.");
 });
 
 const form = document.getElementById("briefForm");
