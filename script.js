@@ -15,6 +15,10 @@ document.querySelectorAll('[data-wa="product"]').forEach((el) => {
   el.href = waLink("Halo Entry Level FX EA, saya ingin konsultasi dan melakukan pemesanan rental XAUUSDc AUTO DUAL PENDING GRID V2.1. Mohon informasi prosedur aktivasi, kompatibilitas akun/broker, instalasi, dan dukungan teknis. Pilihan durasi: 1 bulan Rp249.000 / 3 bulan Rp649.000 / 6 bulan Rp1.099.000 / 1 tahun Rp1.899.000.");
 });
 
+document.querySelectorAll('[data-wa="smc-rental"]').forEach((el) => {
+  el.href = waLink("Halo Entry Level FX EA, saya ingin konsultasi dan melakukan pemesanan rental SMC HYBRID GRID EA V1.6. Mohon informasi harga rental, kompatibilitas akun/broker, aktivasi lisensi, instalasi, dan dukungan teknis.");
+});
+
 const form = document.getElementById("briefForm");
 if (form) {
   form.addEventListener("submit", (event) => {
